@@ -1,0 +1,18 @@
+<h1>Formulario Dos Campo</h1>
+
+<form [formGroup]="formulario">
+    <div class="form-group">
+        <label>Campo1:</label>
+        <input type="text" placeholder="Campo1" name="campo1" formControlName="campo1" required>
+
+        <small *ngIf="formularioReactivo.campo1?.errors?.required && formularioReactivo.campo1.touched">Campo1 es requerido</small>
+
+        <label>Campo2:</label>
+        <input type="text" placeholder="Campo2" name="campo2" formControlName="campo2">
+
+        <button class="btn btn-primary" type="submit" (click)="enviarDatos()" [disabled]="!formulario.valid">Enviar</button>
+
+    </div>
+</form>
+
+<button class="btn btn-primary" type="submit" (click)="obtener()">Enviar</button>
