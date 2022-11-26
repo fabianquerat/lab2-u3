@@ -16,3 +16,18 @@
 </form>
 
 <button class="btn btn-primary" type="submit" (click)="obtener()">Enviar</button>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Campo1</th>
+        <th scope="col">Campo2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of datos">
+        <td>{{dato.campo1}}</td>
+        <td>{{dato.campo2}}</td>
+      </tr>
+    </tbody>
+  </table>
